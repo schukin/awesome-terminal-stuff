@@ -26,7 +26,6 @@ fi
 /Applications/ccollab_client/ccollab admin review create --title "\"$message\""
 
 echo "$gitout" | while read line; do
-#git log -$count --pretty=format:'%h %s' --author="$author" --no-merges | while read line; do
 	rev=${line:0:7}
 	msg=${line:8}
 	echo "Commit: $rev Msg: $msg"
