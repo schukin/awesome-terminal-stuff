@@ -3,6 +3,7 @@ set number		" Show line numbers
 set showmatch		" Show matching brackets
 set matchpairs+=<:>	" Have % bounce between angled brackets, as well as other kinds
 set nocompatible	" Does cool VIM stuff
+set hls				" Highlight search
 
 " ### Tabs ##################
 set softtabstop=4
@@ -10,6 +11,9 @@ set shiftwidth=4
 set tabstop=4
 set noexpandtab
 set autoindent
+set si				" Smart indent
+filetype indent on	" Switch on filetype detection and loads
+filetype on			"		indent file (indent.vim) for specific file types
 
 " ### Status ################
 set title		" Show title in menu bar
