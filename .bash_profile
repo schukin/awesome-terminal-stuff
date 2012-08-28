@@ -4,6 +4,13 @@
 # Shorthand aliases
 alias ls='ls -G'
 alias sourceit='source ~/.bash_profile'
+alias gc='git checkout'
+alias gm='git commit -m'
+alias gb='git branch'
+alias gd='git diff --color'
+alias gs='git status'
+alias ga='git add'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 
 # Shortcut for grepping stuff
 find_in_files () {
@@ -28,10 +35,16 @@ function parse_git_branch {
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
-WHITE="\e[0;37m"
+NORMAL="\[\e[0m\]"
 
-PS1="$RED\$(date +%H:%M) \W$YELLOW \$(parse_git_branch)$WHITE\$ "
+PS1="$RED\$(date +%H:%M) \W$YELLOW \$(parse_git_branch) $NORMAL"
 
 # Node.js stuff
-export NODE_PATH="/usr/local/lib/node"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+# export NODE_PATH="/usr/local/lib/node"
+# export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+. ~/nvm/nvm.sh
+
+# Yammer
+export IOS_BUILD_PROVISONING_PROFILE="/Users/dschukin/Library/MobileDevice/Provisioning Profiles/47E05827-E3B2-44D8-9AE0-0930A985AF01.mobileprovision"
+#export IOS_BUILD_AUTH_TOKEN="cOT6LRVcybET9LwfzhC9A"
+export IOS_BUILD_AUTH_TOKEN="IVN5CcWGXm4idSHtOzhTw"
