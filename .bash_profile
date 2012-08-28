@@ -43,8 +43,3 @@ PS1="$RED\$(date +%H:%M) \W$YELLOW \$(parse_git_branch) $NORMAL"
 # export NODE_PATH="/usr/local/lib/node"
 # export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
 . ~/nvm/nvm.sh
-
-# Yammer
-export IOS_BUILD_PROVISONING_PROFILE="/Users/dschukin/Library/MobileDevice/Provisioning Profiles/47E05827-E3B2-44D8-9AE0-0930A985AF01.mobileprovision"
-#export IOS_BUILD_AUTH_TOKEN="cOT6LRVcybET9LwfzhC9A"
-export IOS_BUILD_AUTH_TOKEN="IVN5CcWGXm4idSHtOzhTw"
