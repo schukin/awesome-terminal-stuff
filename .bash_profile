@@ -40,6 +40,4 @@ NORMAL="\[\e[0m\]"
 PS1="$RED\$(date +%H:%M) \W$YELLOW \$(parse_git_branch) $NORMAL"
 
 # Node.js stuff
-# export NODE_PATH="/usr/local/lib/node"
-# export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
 . ~/nvm/nvm.sh
