@@ -3,8 +3,16 @@ Awesome Terminal Stuff
 
 Here's some stuff I use.
 
-Copy+paste this for fast, easy win.
+## vim
 
-	$ git clone git://github.com/schukin/awesome-terminal-stuff.git
-	$ cd awesome-terminal-stuff
-	$ ./add_awesomeness.sh
+	$ ln -s .vimrc ~/.vimrc
+
+## .bash_profile 
+
+	$ echo "source `pwd`/.bash_profile" >> ~/.bash_profile
+
+## Other stuff
+
+[Sublime Text](http://www.sublimetext.com/docs/2/osx_command_line.html):
+
+	$ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
