@@ -1,6 +1,3 @@
-# TODO: Figure out best way to organize a bash_profile
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
 #############################################################
 # Shorthand aliases											#
 #############################################################
