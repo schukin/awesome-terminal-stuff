@@ -25,6 +25,8 @@ alias gs='git status'
 alias ga='git add -A'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias gsl='git stash list'
+alias gpom='git push origin master'
+alias gphm='git push heroku master'
 
 git_stash_apply () {
 	git stash apply stash@{$1}
