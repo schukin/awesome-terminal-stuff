@@ -1,6 +1,7 @@
 #############################################################
 # Shorthand aliases											#
 #############################################################
+alias ..='cd ..'
 alias ls='ls -G'
 alias sourceit='source ~/.bash_profile'
 alias fn='find . -name'
