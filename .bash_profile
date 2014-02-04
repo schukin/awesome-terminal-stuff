@@ -32,6 +32,16 @@ git_stash_apply () {
 
 alias gsa=git_stash_apply
 
+git_commit_everything () {
+	ga
+	gs
+	NEXT_COMMIT_MESSAGE=`curl -s http://whatthecommit.com | perl -p0e '($_)=m{<p>(.+?)</p>}s'`
+	echo $NEXT_COMMIT_MESSAGE
+	gm "$NEXT_COMMIT_MESSAGE"
+}
+
+alias gce=git_commit_everything
+
 #############################################################
 # Rails aliases												#
 #############################################################
