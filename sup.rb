@@ -30,3 +30,6 @@ WELCOME TO YOUR COMPUTER
 #{random_fact}"
 
 puts box_text(welcome_text, '*')
+
+# Speaks text
+# welcome_text.split(/\r?\n/).each { |line| `say #{line}` unless line.length < 5 }

@@ -112,10 +112,4 @@ PATH="~/bin:${PATH}"
 # Saucey intro												#
 #############################################################
 
-echo "****************************"
-echo "* HELLO DAVE               *"
-echo "*                          *"
-echo "* WELCOME TO YOUR COMPUTER *"
-echo "*                          *"
-echo "* YOU LOOK GREAT TODAY BTW *"
-echo "****************************"
+ruby sup.rb
