@@ -9,7 +9,8 @@ random_fact = ['You look fucking awesome today',
 				"Have you been working out?",
 				"FYI, all your friends worry they aren't as funny as you.",
 				"You pick the best radio stations when you're riding shotgun.",
-				"Your sneezes sound like a chorus of angels giggling."].sample.upcase
+				"Your sneezes sound like a chorus of angels giggling.",
+				"BTW I dig your style."].sample.upcase
 
 welcome_text = "HELLO DAVE
 
