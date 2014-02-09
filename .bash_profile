@@ -112,4 +112,4 @@ PATH="~/bin:${PATH}"
 # Saucey intro												#
 #############################################################
 
-ruby sup.rb
+ruby ~/src/awesome-terminal-stuff/sup.rb
