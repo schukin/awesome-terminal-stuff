@@ -15,6 +15,7 @@ Here's some stuff I use.
 
 At this point this acts as more of a TODO list for me when setting up new dev environments; I'm too lazy to write a script to just set it up all automatically cause I'm not in IT and don't spin up a new Mac every other day.
 
+* [oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [Sublime Text](http://www.sublimetext.com/docs/2/osx_command_line.html):
 	```
 	$ mkdir ~/bin
