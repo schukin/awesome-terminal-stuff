@@ -21,4 +21,9 @@ WELCOME TO YOUR COMPUTER
 puts welcome_text.with_box('*')
 
 # Speaks text
-# welcome_text.split(/\r?\n/).each { |line| `say #{line}` unless line.length < 5 }
+def speak(some_text)
+  some_text.split(/\r?\n/).each { |line| `say -v Victoria "#{line}"` unless line.length < 5 }
+end
+
+fork { speak(welcome_text) }
+
