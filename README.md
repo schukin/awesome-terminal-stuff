@@ -7,9 +7,10 @@ Here's some stuff I use.
 
 	$ ln -s .vimrc ~/.vimrc
 
-## .bash_profile 
+## .zshrc / .aliases
 
-	$ echo "source `pwd`/.bash_profile" >> ~/.bash_profile
+	$ echo "source `pwd`/.zshrc" >> ~/.zshrc
+	$ echo "source `pwd`/.aliases" >> ~/.zshrc
 
 ## Other stuff
 
