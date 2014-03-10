@@ -5,6 +5,7 @@ alias ..='cd ..'
 alias ls='ls -G'
 alias sourceit='source ~/.bash_profile'
 alias fn='find . -name'
+alias editawesomeness='e ~/src/awesome-terminal-stuff; e ~/src/awesome-terminal-stuff/.aliases'
 
 #############################################################
 # Shortcuts													#
@@ -26,9 +27,10 @@ alias gs='git status'
 alias ga='git add -A'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias gsl='git stash list'
-alias glatest='git pull origin master'
+alias latest='git pull origin master'
 alias fuckit='git reset --hard'
 alias masterbase='git rebase master'
+alias softreset='git reset --soft HEAD^'
 
 git_checkout_latest_branch_except_master () {
 	LATEST_BRANCH=`git for-each-ref --count=1 --sort=-committerdate refs/heads/_dschukin* --format='%(refname:short)'`
@@ -91,3 +93,4 @@ nuke_derived_data () {
 }
 
 alias oxw='open *.xcworkspace'
+alias oxp='open *.xcproject'
