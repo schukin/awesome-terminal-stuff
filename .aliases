@@ -118,3 +118,14 @@ ram-derived-data() {
 	newfs_hfs -v DerivedData $RAM_DISK_PATH
 	diskutil mount -mountPoint ~/Library/Developer/Xcode/DerivedData $RAM_DISK_PATH
 }
+
+#############################################################
+# git autocompletion										#
+#############################################################
+
+if [ -f ~/src/awesome-terminal-stuff/.git-completion.bash ]; then
+	. ~/src/awesome-terminal-stuff/.git-completion.bash
+	__git_complete gc _git_checkout
+else
+	echo "Error: git-completion.bash not found!"
+fi
