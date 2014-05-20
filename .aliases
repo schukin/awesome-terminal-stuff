@@ -50,10 +50,25 @@ git_commit_everything () {
 	gs
 	NEXT_COMMIT_MESSAGE=`curl -s http://whatthecommit.com | perl -p0e '($_)=m{<p>(.+?)</p>}s'`
 	echo $NEXT_COMMIT_MESSAGE
-	gm "$NEXT_COMMIT_MESSAGE"
+	gm "[WIP] $NEXT_COMMIT_MESSAGE"
 }
 
 alias gce=git_commit_everything
+
+git_uncommit_wip () {
+	LAST_COMMIT_MESSAGE=`git log --pretty=format:"%s" -n 1`
+	LAST_COMMIT_MESSAGE_PREFIX=`echo $LAST_COMMIT_MESSAGE | cut -c1-5`
+	if [ "$LAST_COMMIT_MESSAGE_PREFIX" = "[WIP]" ]; then
+		git reset --soft HEAD^
+		echo "Unwipped last commit"
+		gs
+	else
+		echo "Error: Last commit was not a WIP!"
+		echo "       Prefix must start with \"[WIP]\" (last commit was \"$LAST_COMMIT_MESSAGE\")"
+	fi;
+}
+
+alias unwip=git_uncommit_wip
 
 #############################################################
 # Rails aliases												#
