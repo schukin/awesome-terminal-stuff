@@ -18,6 +18,7 @@ alias e='subl'
 #############################################################
 # git aliases												#
 #############################################################
+
 alias gc='git checkout'
 alias gcm='gc master'
 alias gm='git commit -m'
@@ -26,7 +27,9 @@ alias gd='git diff --color'
 alias gdc='gd --cached'
 alias gs='git status'
 alias ga='git add -A'
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias git-log-formatted='git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias gl='git-log-formatted -n 5'
+alias gll='git-log-formatted --graph'
 alias gsl='git stash list'
 alias latest='git pull origin master'
 alias fuckit='git reset --hard'
