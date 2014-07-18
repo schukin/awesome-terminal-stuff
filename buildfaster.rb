@@ -43,6 +43,9 @@ class Xcodeproj::Project
 				static_analysis_keys.each do |key|
 					build_config.build_settings[key] = 'NO'
 				end
+
+				# Don't generate dSYM files
+				build_config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf'
 			end
 		end
 
