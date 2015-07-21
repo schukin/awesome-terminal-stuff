@@ -31,9 +31,10 @@ alias gl='git --no-pager log -n 10 --pretty=format:"%Cred%h%Creset -%C(yellow)%d
 alias gll='git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias gsl='git stash list'
 alias latest='git pull origin master'
-alias fuckit='git reset --hard'
+alias fuckit='git reset --hard; git clean -df'
 alias masterbase='git rebase master'
 alias softreset='git reset --soft HEAD^'
+alias unfuck-submodules='git submodule foreach git reset --hard'
 
 git_checkout_latest_branch_except_master () {
 	LATEST_BRANCH=`git for-each-ref --count=1 --sort=-committerdate refs/heads/_dschukin* --format='%(refname:short)'`
@@ -56,6 +57,7 @@ git_commit_everything () {
 }
 
 alias gce=git_commit_everything
+alias yolo=git_commit_everything
 
 git_uncommit_wip () {
 	LAST_COMMIT_MESSAGE=`git log --pretty=format:"%s" -n 1`
@@ -88,7 +90,7 @@ find_in_files () {
 		echo "Example:"
 		echo "	ff 'dave'"
 	else
-		grep -lr -i $1 .
+		grep --exclude-dir=".git" -lr -i $1 .
 	fi
 }
 
