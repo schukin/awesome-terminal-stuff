@@ -13,6 +13,13 @@ alias editawesomeness='e ~/src/awesome-terminal-stuff; e ~/src/awesome-terminal-
 
 alias d='cd ~/Dropbox'
 alias s='cd ~/src'
+
+################
+# Sublime Text
+################
+# /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
+export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH
+export EDITOR='subl -w'
 alias e='subl'
 
 #############################################################
@@ -133,3 +140,25 @@ if [ -f ~/src/awesome-terminal-stuff/.git-completion.bash ]; then
 else
 	echo "Error: git-completion.bash not found!"
 fi
+
+#############################################################
+# CLI prompt. Prob doesn't belong here, but whatever.		#
+#############################################################
+
+function parse_git_branch () {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+ 
+RED="\[\033[0;31m\]"
+YELLOW="\[\033[0;33m\]"
+GREEN="\[\033[0;32m\]"
+NO_COLOR="\[\033[0m\]"
+ 
+# PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+PS1="\w $YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+
+#############################################################
+# lolcommits 												#
+#############################################################
+
+export LOLCOMMITS_DELAY=3
