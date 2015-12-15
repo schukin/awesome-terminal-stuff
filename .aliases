@@ -106,7 +106,7 @@ alias ff=find_in_files
 #############################################################
 # Xcode / Cocoapods											#
 #############################################################
-alias repod='rm -rf Pods Podfile.lock ; pod install'
+alias repod='pod cache clean --all; rm -rf Pods Podfile.lock ; pod install'
 close_and_repod () {
 	ruby ~/src/awesome-terminal-stuff/close_xcode_window.rb
 	repod
