@@ -162,3 +162,4 @@ PS1="\w $YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 #############################################################
 
 export LOLCOMMITS_DELAY=3
+export LOLCOMMITS_ANIMATE=3
