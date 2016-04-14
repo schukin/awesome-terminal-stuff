@@ -13,6 +13,7 @@ alias editawesomeness='e ~/src/awesome-terminal-stuff; e ~/src/awesome-terminal-
 
 alias d='cd ~/Dropbox'
 alias s='cd ~/src'
+alias rm='trash'	# brew install trash
 
 ################
 # Sublime Text
@@ -32,7 +33,8 @@ alias gm='git commit -m'
 alias gb='git branch'
 alias gd='git diff --color'
 alias gdc='gd --cached'
-alias gs='git status'
+alias gs='git status -sb'
+alias gss='git status'
 alias ga='git add -A'
 alias gl='git --no-pager log -n 10 --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative; echo ""'
 alias gll='git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
@@ -162,4 +164,4 @@ PS1="\w $YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 #############################################################
 
 export LOLCOMMITS_DELAY=3
-export LOLCOMMITS_ANIMATE=3
+# export LOLCOMMITS_ANIMATE=3
