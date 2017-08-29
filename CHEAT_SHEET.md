@@ -16,7 +16,7 @@ Cheet sheet for n00bs.
 | `pwd` | Prints the path of the current directory |
 | `cat poop` | Prints the contents of the file called "poop" |
 | `echo "Hello world"` | Prints the string "Hello world" to the console |
-| `echo "Hello world" | pbcopy` | Pipes the string "Hello world" to your clipboard |
+| `echo "Hello world" \| pbcopy` | Pipes the string "Hello world" to your clipboard |
 | `echo "Hello world" > poop` | Writes the string "Hello world" to a new file called "poop" |
 
 
