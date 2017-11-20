@@ -1,6 +1,6 @@
 # itoa
 
-```
+```c
 char *ds_itoa(int num, char* str, int base)
 ```
 
@@ -18,7 +18,7 @@ Ask yourself this: Are there _any_ numbers that you know how to convert to a str
 
 Of course! You already know how to convert any digit from `0` to `9` to a `char`! So let's start with writing a function that converts single-digit numbers:
 
-```
+```c
 char *ds_itoa(int num, char* str, int base)
 {
 	char c;
@@ -30,7 +30,7 @@ char *ds_itoa(int num, char* str, int base)
 
 Great! We can even tighten this up a bit:
 
-```
+```c
 char *ds_itoa(int num, char* str, int base)
 {
 	str[0] = '0' + num;
@@ -53,7 +53,7 @@ So for a 2-digit integer, we would do the following:
 
 Let's code this up:
 
-```
+```c
 char *ds_itoa(int num, char* str, int base)
 {
 	int digit1;
@@ -77,7 +77,7 @@ To do this, we'll have a `while` loop that keeps getting the last digit via `%`,
 
 But first we'll need to count how many digits the number has. We can do this by using another `while` loop to count how many times we can divide it by 10 before it becomes 0.
 
-```
+```c
 char *ds_itoa(int num, char* str, int base)
 {
 	int digits;
@@ -114,7 +114,7 @@ char *ds_itoa(int num, char* str, int base)
 
 w00t!!! It works!!! Let's clean this up by extracting the calculation of # of digits into a separate function. Now's also a good time to add our null-terminating `\0` at the end.
 
-```
+```c
 int count_digits(int num)
 {
 	int digits;
@@ -155,7 +155,7 @@ Oh right. Integers can be negative.
 
 There are a few ways to do this. I've offered one solution below.
 
-```
+```c
 int count_digits(int num)
 {
     int digits;
