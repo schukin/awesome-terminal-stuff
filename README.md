@@ -37,3 +37,17 @@ At this point this acts as more of a TODO list for me when setting up new dev en
 	$ rbenv install 2.1.0
 	```
 
+# Not Terminal, But Good
+
+## IntelliJ
+
+### Show current file in project
+
+1. Install the "Extra Actions" plugin
+	
+	![Step one](docs/intellij_select_in_project_1.png)
+2. Configure the keymap for the new "Select in Project" action to be **⇧⌘J** (same as it is in Xcode).
+	
+	![Step one](docs/intellij_select_in_project_2.png)
+3. Do this for each IntelliJ-based IDE (Android Studio, RubyMine, etc) that you're using.
+4. That's it! Hit **⇧⌘J** at any time to show the current file in the project navigator.
