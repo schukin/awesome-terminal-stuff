@@ -6,6 +6,7 @@ alias ls='ls -G'
 alias sourceit='source ~/.bash_profile'
 alias fn='find . -name'
 alias editawesomeness='e ~/src/awesome-terminal-stuff; e ~/src/awesome-terminal-stuff/.aliases'
+alias be='bundle exec'
 
 #############################################################
 # Shortcuts													#
