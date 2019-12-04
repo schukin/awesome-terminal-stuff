@@ -66,6 +66,7 @@ git_commit_everything () {
 	gm "[WIP] $NEXT_COMMIT_MESSAGE"
 }
 
+alias wip=git_commit_everything
 alias gce=git_commit_everything
 alias yolo=git_commit_everything
 
@@ -131,6 +132,10 @@ ram-derived-data() {
 	echo "Mounting at $RAM_DISK_PATH"
 	newfs_hfs -v DerivedData $RAM_DISK_PATH
 	diskutil mount -mountPoint ~/Library/Developer/Xcode/DerivedData $RAM_DISK_PATH
+}
+
+reset-xcode-settings() {
+	defaults delete com.apple.dt.Xcode
 }
 
 #############################################################
