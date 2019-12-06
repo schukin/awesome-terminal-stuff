@@ -3,7 +3,7 @@
 #############################################################
 alias ..='cd ..'
 alias ls='ls -G'
-alias sourceit='source ~/.bash_profile'
+alias sourceit='source ~/.zshrc'
 alias fn='find . -name'
 alias editawesomeness='e ~/src/awesome-terminal-stuff; e ~/src/awesome-terminal-stuff/.aliases'
 alias be='bundle exec'
@@ -142,12 +142,12 @@ reset-xcode-settings() {
 # git autocompletion										#
 #############################################################
 
-if [ -f ~/src/awesome-terminal-stuff/.git-completion.bash ]; then
-	. ~/src/awesome-terminal-stuff/.git-completion.bash
-	__git_complete gc _git_checkout
-else
-	echo "Error: git-completion.bash not found!"
-fi
+#if [ -f ~/src/awesome-terminal-stuff/.git-completion.bash ]; then
+#	. ~/src/awesome-terminal-stuff/.git-completion.bash
+#	__git_complete gc _git_checkout
+#else
+#	echo "Error: git-completion.bash not found!"
+#fi
 
 #############################################################
 # rake autocompletion										#
@@ -169,7 +169,9 @@ GREEN="\[\033[0;32m\]"
 NO_COLOR="\[\033[0m\]"
  
 # PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
-PS1="\w $YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+# PS1="\w $YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+#export PS1="${print -P %~} %F{yellow}$(parse_git_branch)%f\$ "
+# PROMPT="%d %%%F{yellow}${parse_git_branch}%f\$ "
 
 #############################################################
 # lolcommits 												#

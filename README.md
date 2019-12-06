@@ -3,6 +3,10 @@ Awesome Terminal Stuff
 
 Here's some stuff I use.
 
+## ohmyzsh
+
+Just install that first.
+
 ## vim
 
 	$ ln -s .vimrc ~/.vimrc

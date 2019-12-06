@@ -35,4 +35,4 @@ function _rakecomplete() {
   return 0
 }
 
-complete -o default -o nospace -F _rakecomplete rake
+# complete -o default -o nospace -F _rakecomplete rake
