@@ -7,6 +7,14 @@ Here's some stuff I use.
 
 Just install that first.
 
+## Brew
+
+brew.sh
+
+## trash
+
+`brew install trash`
+
 ## vim
 
 	$ ln -s .vimrc ~/.vimrc

@@ -43,7 +43,7 @@ alias gsl='git stash list'
 alias latest='git pull origin master'
 alias fuckit='git reset --hard; git clean -df'
 alias masterbase='git rebase master'
-alias softreset='git reset --soft HEAD^'
+alias softreset="git reset --soft 'HEAD^'"
 alias unfuck-submodules='git submodule foreach git reset --hard'
 
 git_checkout_latest_branch_except_master () {
@@ -74,7 +74,7 @@ git_uncommit_wip () {
 	LAST_COMMIT_MESSAGE=`git log --pretty=format:"%s" -n 1`
 	LAST_COMMIT_MESSAGE_PREFIX=`echo $LAST_COMMIT_MESSAGE | cut -c1-5`
 	if [ "$LAST_COMMIT_MESSAGE_PREFIX" = "[WIP]" ]; then
-		git reset --soft HEAD^
+		git reset --soft 'HEAD^'
 		echo "Unwipped last commit"
 		gs
 	else
