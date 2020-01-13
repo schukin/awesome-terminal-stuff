@@ -63,3 +63,7 @@ At this point this acts as more of a TODO list for me when setting up new dev en
 	![Step one](docs/intellij_select_in_project_2.png)
 3. Do this for each IntelliJ-based IDE (Android Studio, RubyMine, etc) that you're using.
 4. That's it! Hit **⇧⌘J** at any time to show the current file in the project navigator.
+
+## Git hooks
+
+Copy `pre-commit` from the `git_hooks` directory in this repo to the `.git/hooks` directory in your project repo.
