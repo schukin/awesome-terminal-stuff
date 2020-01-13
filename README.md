@@ -66,4 +66,4 @@ At this point this acts as more of a TODO list for me when setting up new dev en
 
 ## Git hooks
 
-Copy `pre-commit` from the `git_hooks` directory in this repo to the `.git/hooks` directory in your project repo.
+Copy `pre-commit` from the `git_hooks` directory in this repo to the `.git/hooks` directory in your project repo. (WARNING: make sure there isn't an existing file with this name! If there is, just copy the contents in)
