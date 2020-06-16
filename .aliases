@@ -13,7 +13,6 @@ alias be='bundle exec'
 #############################################################
 
 alias d='cd ~/Dropbox'
-alias s='cd ~/src'
 alias rm='trash'	# brew install trash
 
 ################
@@ -63,7 +62,7 @@ git_commit_everything () {
 	gs
 	NEXT_COMMIT_MESSAGE=`curl -s http://whatthecommit.com | perl -p0e '($_)=m{<p>(.+?)</p>}s'`
 	echo $NEXT_COMMIT_MESSAGE
-	gm "[WIP] $NEXT_COMMIT_MESSAGE"
+	git commit --no-verify -m "[WIP] $NEXT_COMMIT_MESSAGE"
 }
 
 alias wip=git_commit_everything
@@ -190,5 +189,14 @@ function spoof_mac_address() {
 
 function reset_mac_address() {
 	~/src/awesome-terminal-stuff/reset_mac_address.rb
+}
+
+#############################################################
+# Fix Postgres		 										#
+#############################################################
+
+function fix_pg() {
+	rm /usr/local/var/postgres/postmaster.pid
+	brew services restart postgresql
 }
 
